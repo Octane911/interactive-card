@@ -13,7 +13,7 @@ app.use(cors());
 
 app.post("/api/stripe-payment", (req, res) => {
   const stripe = require("stripe")(
-    "sk_test_51OJZcXHW7hOYEegHh1MXwiYlv8371dCVpTvgOUKZiuQG1nKY2QkZohZoDxjdcBHDxvxVfNca6xWgPp5gV1Iit3vP00BYmAJaRI" /* Add Strip account Secret Key Here */
+    "/* Add Strip account Secret Key Here */" /* Add Strip account Secret Key Here */
   );
 
   const { amount, email, token } = req.body;
@@ -28,7 +28,7 @@ app.post("/api/stripe-payment", (req, res) => {
       return stripe.charges.create({
         amount: parseFloat(amount) * 100,
         description: `Payment for USD ${amount}`,
-        currency: "USD",
+        currency: "LKR",
         customer: customer.id,
       });
     })

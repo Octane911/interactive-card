@@ -23,7 +23,7 @@ function App() {
       s.src = "https://js.stripe.com/v2/";
       s.onload = () => {
         window["Stripe"].setPublishableKey(
-          "pk_test_51OJZcXHW7hOYEegHDCoZq8iq5sXM5cH4OJsQMlnlSQyx8Moxpcp4lOLSOWJoP85QXiRErXX0RfnmiPcC6do8Aman00QkoXLKbO" /* Add the Published key of the stripe account */
+          "/* Add the Published key of the stripe account */" 
         );
       };
       window.document.body.appendChild(s);
